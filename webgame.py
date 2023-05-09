@@ -24,7 +24,7 @@ class WebGame(Env):
         
         #check score before performing action
         try:
-            score_before_action = int(env.get_score().strip())
+            score_before_action = int(self.get_score().strip())
         except ValueError:
             score_before_action = 0
         
@@ -57,7 +57,7 @@ class WebGame(Env):
             score_after_action = 0
         else:
             try:  
-                score_after_action = int(env.get_score().strip())
+                score_after_action = int(self.get_score().strip())
             except ValueError:
                 score_after_action = score_before_action
         
